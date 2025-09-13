@@ -1,7 +1,0 @@
-# data.yaml（修改后）
-train: C:/Users/Lanyi/Desktop/Project/Eyetrack_Fursuit/Dataset/images/train
-val: C:/Users/Lanyi/Desktop/Project/Eyetrack_Fursuit/Dataset/images/val
-test: C:/Users/Lanyi/Desktop/Project/Eyetrack_Fursuit/Dataset/images/test
-
-nc: 2
-names: ['eyeball', 'pupil']
