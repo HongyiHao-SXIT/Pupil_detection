@@ -9,10 +9,9 @@ def compute_lamp_scores(weight: torch.Tensor):
     Compute LAMP scores for a weight tensor (same math as the paper).
     Returns a tensor of same shape with scores (on the same device as weight).
     """
-    # work on CPU to save GPU memory
     w = weight.detach().cpu().flatten()
     w_abs2 = (w.abs() ** 2)
-    vals, indices = torch.sort(w_abs2)  # ascending
+    vals, indices = torch.sort(w_abs2)
     # suffix sum: denom for each sorted position
     suffix = torch.flip(torch.cumsum(torch.flip(vals, dims=[0]), dim=0), dims=[0])
     lamp_sorted = vals / (suffix + 1e-12)

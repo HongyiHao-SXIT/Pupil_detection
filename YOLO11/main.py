@@ -4,13 +4,13 @@ if __name__ == '__main__':
 
     # 使用预训练权重+配置文件创建模型
     # model = YOLO(r'yolo11n.pt')
-    model = YOLO(r'/workspace/YOLO11/ultralytics/cfg/models/11/yolo11.yaml')
+    model = YOLO(r'/YOLO11/ultralytics/cfg/models/11/yolo11.yaml')
     # model.load('/workspace/YOLO11/ultralytics/cfg/models/11/yolo11.yaml')
     model.train(cfg='ultralytics/cfg/default.yaml',
                 data=r"/workspace/data.yaml",
                 optimizer='SGD',
                 epochs=200,
-                project=r"/workspace/YOLO11/runs",
+                project=r"/YOLO11/runs",
                 name="train-200epoch-v11n.yaml",
                 batch=24,
                 workers=8,
