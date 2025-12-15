@@ -1,5 +1,0 @@
-train: C:/Users/Lanyi/Desktop/Project/Pupil_detection/Dataset/images/train
-val: C:/Users/Lanyi/Desktop/Project/Pupil_detection/Dataset/images/test
-
-nc: 2
-names: ['eyeballs', 'pupil']
